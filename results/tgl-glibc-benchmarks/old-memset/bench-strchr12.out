@@ -1,0 +1,4996 @@
+{
+ "timing_type": "hp_timing",
+ "functions": {
+  "strchr": {
+   "bench-variant": "",
+   "ifuncs": ["generic_strchr", "__strchr_evex", "__strchr_evex512", "__strchr_avx2", "__strchr_sse2", "__strchr_sse2_no_bsf"],
+   "results": [
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 32,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.0322, 3.30118, 3.09634, 4.26086, 5.5423, 6.39081]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 32,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [11.2465, 3.19553, 2.66373, 4.26123, 5.56393, 6.39273]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.3651, 4.29364, 3.3396, 5.00586, 11.7007, 9.4559]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [19.076, 4.65735, 3.49252, 5.82242, 12.2996, 9.66296]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 128,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8364, 6.27798, 5.51962, 6.28281, 14.5072, 14.7938]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 128,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [32.9721, 7.31653, 5.63907, 6.67514, 14.2032, 15.0456]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [84.0257, 11.4681, 7.51108, 12.035, 19.704, 24.2554]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [71.7072, 11.1864, 8.29367, 12.3049, 19.3862, 25.0848]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 512,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [140.785, 16.2943, 14.9051, 16.5861, 30.6673, 66.5872]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 512,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [135.973, 16.2505, 13.0329, 16.2222, 30.0892, 63.821]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1024,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [242.3, 25.1328, 19.8644, 25.8341, 49.1494, 107.156]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1024,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [236.435, 25.1361, 18.9094, 25.2919, 47.8428, 107.787]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2048,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [451.025, 42.188, 31.033, 44.6815, 109.136, 184.948]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2048,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [446.547, 40.2902, 30.2401, 43.6217, 114.802, 187.248]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 32,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.5414, 3.26675, 4.07367, 4.35324, 5.66437, 6.56641]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 32,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [11.5439, 3.36139, 2.72284, 4.35272, 5.68671, 7.07565]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.1377, 4.20453, 3.26718, 4.89822, 11.4649, 9.40265]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [19.0316, 4.39328, 3.98376, 5.11847, 12.0249, 9.67868]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 128,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0881, 7.6066, 5.74042, 6.28082, 14.5192, 14.8598]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 128,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [32.9838, 7.23352, 5.35614, 6.82559, 14.5279, 14.8334]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [80.8398, 13.1617, 7.2793, 12.3001, 20.236, 24.8847]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [82.0422, 12.3975, 7.6806, 12.0288, 19.0808, 24.6053]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 512,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.544, 16.6774, 13.5864, 16.221, 30.0005, 66.5121]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 512,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [136.691, 16.772, 13.6164, 16.2234, 29.9101, 43.9843]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 1024,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [239.794, 25.0388, 19.4353, 25.8527, 49.0555, 107.776]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 1024,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [236.084, 24.7121, 18.4636, 25.2885, 47.8657, 107.292]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 2048,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [447.272, 40.1331, 29.7023, 43.7572, 112.404, 187.061]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 2048,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [446.182, 40.5709, 30.235, 44.0255, 110.658, 186.93]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [17.9617, 4.20352, 5.04266, 4.89819, 11.4609, 9.25107]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [18.2599, 4.29321, 3.34021, 5.00555, 11.7267, 9.45676]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [18.3673, 4.29544, 3.33804, 5.56226, 11.8209, 9.46231]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [18.532, 4.29782, 3.89459, 5.55984, 11.7213, 9.56729]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [19.4083, 4.49493, 3.49185, 5.2395, 12.2729, 10.0441]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [19.2082, 4.55408, 3.98044, 5.68848, 11.9846, 10.24]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [18.791, 4.3941, 3.4126, 5.11905, 12.0055, 10.8082]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [18.9618, 4.39264, 3.98093, 5.11929, 11.9891, 10.8076]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [18.8718, 4.3945, 4.24908, 5.11972, 11.9944, 10.8067]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [18.9691, 4.39246, 3.98032, 5.11978, 11.9809, 10.3372]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [18.9671, 4.39331, 3.98135, 5.11948, 12.007, 11.5078]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [19.4016, 4.49271, 4.07529, 5.81909, 12.2838, 11.0591]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [19.235, 4.49457, 4.07477, 5.23788, 12.2711, 11.0624]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [19.4722, 4.49649, 4.89545, 5.23782, 12.2763, 10.7991]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [85.2452, 12.5858, 7.48328, 12.2996, 20.1593, 24.7935]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [84.7596, 12.6032, 8.21085, 12.3102, 20.2227, 24.8143]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 16,
+     "timings": [80.9808, 12.2004, 8.38406, 12.3045, 20.1137, 24.8274]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 16,
+     "timings": [83.1731, 12.2487, 7.23218, 12.0323, 19.7336, 24.2423]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 32,
+     "timings": [81.0326, 13.3434, 7.90686, 12.3582, 19.3125, 24.2596]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 32,
+     "timings": [81.0493, 12.6833, 7.28339, 12.9072, 20.2148, 24.8013]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 48,
+     "timings": [83.1917, 12.8557, 7.25021, 12.9674, 20.235, 24.5297]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 48,
+     "timings": [80.3074, 13.2285, 7.35864, 12.9758, 20.2131, 23.7128]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 64,
+     "timings": [82.5365, 15.0305, 7.2731, 13.2587, 19.2349, 23.7196]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 64,
+     "timings": [80.8214, 13.7893, 6.99829, 13.1082, 19.2406, 23.8018]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 80,
+     "timings": [59.6536, 13.9893, 7.71176, 13.3934, 19.762, 24.2425]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 80,
+     "timings": [59.88, 13.8547, 7.15796, 13.3856, 19.6349, 24.3461]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 96,
+     "timings": [60.5557, 11.5792, 7.31586, 11.1742, 20.2258, 24.7141]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 96,
+     "timings": [60.4243, 11.8303, 7.25357, 11.193, 20.1331, 24.8089]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 112,
+     "timings": [61.1261, 11.46, 7.93427, 11.0012, 19.6271, 24.3456]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 112,
+     "timings": [59.8297, 12.0563, 7.69327, 11.0981, 19.7947, 24.3418]
+    },
+    {
+     "rand": 0,
+     "length": 1,
+     "pos": 0,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.67447, 3.74243, 2.32248, 3.89532, 3.3378, 5.20886]
+    },
+    {
+     "rand": 0,
+     "length": 1,
+     "pos": 0,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82492, 2.84436, 2.84601, 3.98105, 3.98297, 5.11841]
+    },
+    {
+     "rand": 0,
+     "length": 2,
+     "pos": 1,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25574, 2.84537, 2.8446, 3.98203, 3.98056, 6.2587]
+    },
+    {
+     "rand": 0,
+     "length": 2,
+     "pos": 1,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82428, 2.84564, 2.84442, 3.98239, 3.98074, 6.25647]
+    },
+    {
+     "rand": 0,
+     "length": 3,
+     "pos": 2,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.8244, 2.84485, 2.84491, 3.41348, 3.9816, 6.25867]
+    },
+    {
+     "rand": 0,
+     "length": 3,
+     "pos": 2,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.8244, 3.41397, 2.37653, 3.41248, 3.98254, 6.25671]
+    },
+    {
+     "rand": 0,
+     "length": 4,
+     "pos": 3,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82492, 2.84525, 2.37732, 3.41403, 3.98166, 6.82602]
+    },
+    {
+     "rand": 0,
+     "length": 4,
+     "pos": 3,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39297, 2.845, 2.37646, 3.41318, 3.98245, 6.25504]
+    },
+    {
+     "rand": 0,
+     "length": 5,
+     "pos": 4,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82541, 2.84354, 2.37677, 3.98276, 3.98135, 5.12122]
+    },
+    {
+     "rand": 0,
+     "length": 5,
+     "pos": 4,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82458, 2.84579, 2.37646, 3.41284, 3.98273, 4.83514]
+    },
+    {
+     "rand": 0,
+     "length": 6,
+     "pos": 5,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82458, 2.84598, 2.37689, 3.41281, 3.98236, 5.6882]
+    },
+    {
+     "rand": 0,
+     "length": 6,
+     "pos": 5,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25549, 2.84525, 2.8443, 3.98178, 3.9808, 5.68884]
+    },
+    {
+     "rand": 0,
+     "length": 7,
+     "pos": 6,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82477, 2.84567, 2.37567, 3.41385, 3.98212, 6.82614]
+    },
+    {
+     "rand": 0,
+     "length": 7,
+     "pos": 6,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82529, 2.84418, 2.37473, 3.41428, 3.98105, 6.25565]
+    },
+    {
+     "rand": 0,
+     "length": 8,
+     "pos": 7,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39297, 2.84357, 2.37515, 3.4144, 3.98029, 6.82645]
+    },
+    {
+     "rand": 0,
+     "length": 8,
+     "pos": 7,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25583, 2.84576, 2.37473, 3.41168, 3.98236, 6.2561]
+    },
+    {
+     "rand": 0,
+     "length": 9,
+     "pos": 8,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.96817, 2.84467, 2.37729, 3.98093, 3.98074, 5.69031]
+    },
+    {
+     "rand": 0,
+     "length": 9,
+     "pos": 8,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.9639, 2.84515, 2.37759, 3.41217, 4.12158, 5.82077]
+    },
+    {
+     "rand": 0,
+     "length": 10,
+     "pos": 9,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14899, 2.91013, 2.43231, 4.0748, 4.07333, 6.40234]
+    },
+    {
+     "rand": 0,
+     "length": 10,
+     "pos": 9,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14645, 3.49326, 2.90964, 3.49307, 4.07303, 6.48242]
+    },
+    {
+     "rand": 0,
+     "length": 11,
+     "pos": 10,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.1459, 2.91174, 2.91229, 3.49146, 4.07532, 6.43246]
+    },
+    {
+     "rand": 0,
+     "length": 11,
+     "pos": 10,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56635, 3.49197, 2.91006, 3.49438, 4.07333, 6.9834]
+    },
+    {
+     "rand": 0,
+     "length": 12,
+     "pos": 11,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56604, 2.91162, 2.91147, 3.49127, 4.0741, 6.98615]
+    },
+    {
+     "rand": 0,
+     "length": 12,
+     "pos": 11,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56537, 2.91061, 2.91226, 3.49307, 4.0744, 6.98447]
+    },
+    {
+     "rand": 0,
+     "length": 13,
+     "pos": 12,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14886, 2.91101, 2.90991, 4.07471, 4.07452, 5.81982]
+    },
+    {
+     "rand": 0,
+     "length": 13,
+     "pos": 12,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14648, 2.91223, 2.9129, 4.07355, 4.07281, 5.82068]
+    },
+    {
+     "rand": 0,
+     "length": 14,
+     "pos": 13,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56995, 2.91061, 2.91068, 3.49432, 4.07291, 5.82254]
+    },
+    {
+     "rand": 0,
+     "length": 14,
+     "pos": 13,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14771, 2.90964, 2.91086, 4.07339, 4.07532, 5.81894]
+    },
+    {
+     "rand": 0,
+     "length": 15,
+     "pos": 14,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56567, 2.91125, 2.91174, 3.49097, 4.07498, 6.98526]
+    },
+    {
+     "rand": 0,
+     "length": 15,
+     "pos": 14,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.72797, 2.91156, 2.91141, 4.07361, 4.07315, 6.98328]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 15,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56549, 2.91098, 2.91138, 4.07285, 4.07358, 6.11243]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 15,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14838, 2.9097, 2.91174, 3.49332, 4.0744, 6.10919]
+    },
+    {
+     "rand": 0,
+     "length": 17,
+     "pos": 16,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.32169, 2.91046, 2.91031, 4.07428, 6.05997, 6.98785]
+    },
+    {
+     "rand": 0,
+     "length": 17,
+     "pos": 16,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.477, 2.91113, 2.90976, 4.07495, 6.05508, 6.11322]
+    },
+    {
+     "rand": 0,
+     "length": 18,
+     "pos": 17,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4742, 2.91098, 2.91135, 3.49103, 6.05676, 6.9848]
+    },
+    {
+     "rand": 0,
+     "length": 18,
+     "pos": 17,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31635, 2.91217, 2.9108, 4.07367, 6.05524, 6.6936]
+    },
+    {
+     "rand": 0,
+     "length": 19,
+     "pos": 18,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89615, 2.90958, 2.91043, 4.07416, 6.05698, 7.56573]
+    },
+    {
+     "rand": 0,
+     "length": 19,
+     "pos": 18,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31598, 2.91138, 2.91013, 4.07944, 6.05444, 7.56561]
+    },
+    {
+     "rand": 0,
+     "length": 20,
+     "pos": 19,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31573, 2.91125, 2.91138, 4.07291, 6.05649, 7.56711]
+    },
+    {
+     "rand": 0,
+     "length": 20,
+     "pos": 19,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.0453, 2.91083, 2.91119, 3.49295, 6.05588, 8.14737]
+    },
+    {
+     "rand": 0,
+     "length": 21,
+     "pos": 20,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31631, 2.91119, 2.90952, 3.49344, 6.05478, 6.41684]
+    },
+    {
+     "rand": 0,
+     "length": 21,
+     "pos": 20,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31549, 2.9111, 2.90982, 4.07495, 6.05444, 6.41153]
+    },
+    {
+     "rand": 0,
+     "length": 22,
+     "pos": 21,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4742, 2.91086, 2.91144, 3.49185, 6.05695, 7.56659]
+    },
+    {
+     "rand": 0,
+     "length": 22,
+     "pos": 21,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89752, 2.90967, 2.91037, 3.4938, 6.05444, 6.98575]
+    },
+    {
+     "rand": 0,
+     "length": 23,
+     "pos": 22,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31604, 2.90988, 2.91101, 4.07336, 6.05655, 7.56641]
+    },
+    {
+     "rand": 0,
+     "length": 23,
+     "pos": 22,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.8013, 2.91232, 2.91049, 4.07391, 6.0545, 7.56561]
+    },
+    {
+     "rand": 0,
+     "length": 24,
+     "pos": 23,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80966, 2.90976, 2.91, 3.49445, 6.05444, 8.14978]
+    },
+    {
+     "rand": 0,
+     "length": 24,
+     "pos": 23,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31491, 2.91153, 2.91043, 3.49139, 6.05637, 8.24866]
+    },
+    {
+     "rand": 0,
+     "length": 25,
+     "pos": 24,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.0641, 2.9097, 2.91031, 4.07428, 6.05676, 6.98538]
+    },
+    {
+     "rand": 0,
+     "length": 25,
+     "pos": 24,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5373, 2.91025, 2.90982, 4.07489, 6.05527, 6.40091]
+    },
+    {
+     "rand": 0,
+     "length": 26,
+     "pos": 25,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5635, 2.91132, 2.91061, 4.07382, 6.0542, 7.56522]
+    },
+    {
+     "rand": 0,
+     "length": 26,
+     "pos": 25,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5668, 2.91208, 2.90994, 3.49326, 6.05542, 6.9837]
+    },
+    {
+     "rand": 0,
+     "length": 27,
+     "pos": 26,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.528, 2.91077, 2.9115, 4.07278, 6.05588, 7.56482]
+    },
+    {
+     "rand": 0,
+     "length": 27,
+     "pos": 26,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5316, 2.91132, 2.91104, 4.07324, 6.05487, 7.56497]
+    },
+    {
+     "rand": 0,
+     "length": 28,
+     "pos": 27,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5341, 2.91138, 2.91037, 4.07416, 6.05414, 7.85782]
+    },
+    {
+     "rand": 0,
+     "length": 28,
+     "pos": 27,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5264, 2.91119, 2.9097, 3.49362, 6.05432, 7.85715]
+    },
+    {
+     "rand": 0,
+     "length": 29,
+     "pos": 28,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5502, 2.91025, 2.5123, 4.07483, 6.05368, 6.69455]
+    },
+    {
+     "rand": 0,
+     "length": 29,
+     "pos": 28,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5291, 2.91235, 2.91086, 4.07404, 6.0545, 6.98404]
+    },
+    {
+     "rand": 0,
+     "length": 30,
+     "pos": 29,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5394, 3.55728, 2.84393, 3.41287, 5.91882, 7.39371]
+    },
+    {
+     "rand": 0,
+     "length": 30,
+     "pos": 29,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.2914, 2.84488, 2.84506, 3.41321, 5.91769, 7.39413]
+    },
+    {
+     "rand": 0,
+     "length": 31,
+     "pos": 30,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.3259, 2.84454, 2.8436, 3.98239, 5.9166, 7.88354]
+    },
+    {
+     "rand": 0,
+     "length": 31,
+     "pos": 30,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5658, 2.91061, 2.90982, 3.49377, 6.05389, 7.85822]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 31,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.532, 2.91, 2.91, 4.07465, 6.05606, 7.56613]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 31,
+     "seek_char": 23,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5408, 2.90976, 2.91098, 4.07336, 6.05667, 7.56488]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.3849, 3.49734, 2.90952, 4.65927, 6.05673, 7.65799]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [12.3224, 3.49191, 2.91162, 4.65598, 6.07858, 8.15231]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4067, 4.65921, 3.49249, 5.82025, 12.2891, 9.93091]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [19.4066, 4.65643, 3.49634, 5.23941, 12.2664, 11.0657]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8485, 8.71628, 5.08035, 6.42682, 14.8582, 15.1955]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [33.8405, 8.08221, 5.46826, 7.56567, 15.4856, 16.0621]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1182, 12.4868, 7.23447, 12.3015, 20.2402, 25.0128]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [61.5299, 13.2621, 7.86179, 12.5914, 20.6244, 26.0462]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [135.789, 17.0612, 13.2137, 16.6167, 30.9795, 68.2353]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [136.836, 18.2098, 13.3544, 16.2196, 29.9388, 45.6661]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [240.527, 24.7027, 19.735, 25.2755, 47.9206, 108.529]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [237.22, 24.2004, 19.4059, 25.286, 49.1827, 106.94]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [443.136, 39.9995, 29.9825, 44.5235, 119.172, 188.905]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [450.431, 40.4569, 29.7208, 43.79, 106.401, 185.937]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.2838, 3.19711, 4.64227, 4.25955, 5.54123, 7.45761]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [11.2973, 3.35501, 2.72137, 4.35284, 5.68231, 7.6207]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.0818, 4.20059, 3.2662, 4.89679, 11.4564, 9.28351]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [18.9014, 4.49432, 3.49417, 5.2377, 12.2536, 11.0666]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8329, 7.48019, 5.34042, 6.13943, 14.2089, 14.5179]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [32.3016, 7.29144, 5.33047, 6.67346, 14.1949, 16.0755]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [84.252, 14.9458, 6.31064, 12.0269, 19.7359, 24.6279]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [83.2855, 11.8645, 7.9086, 12.0321, 19.7009, 24.9777]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.695, 16.2044, 14.5213, 16.2165, 29.8663, 67.8166]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [135.722, 17.6028, 13.785, 16.5815, 30.4937, 45.7157]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [240.758, 26.3808, 19.6259, 26.2726, 49.985, 108.397]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [238.241, 24.1807, 19.1266, 25.2723, 48.9153, 107.271]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [444.973, 40.7914, 29.9565, 43.7685, 104.036, 178.659]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [436.205, 40.6007, 29.3388, 43.7545, 103.808, 178.656]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [17.3148, 4.02878, 4.14011, 4.79285, 11.2138, 9.28183]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 1,
+     "timings": [17.5901, 4.11307, 3.1954, 4.79303, 11.2582, 9.72913]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [17.9623, 4.19937, 3.26682, 4.89685, 11.4572, 9.93909]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 2,
+     "timings": [20.0092, 4.60074, 3.57507, 5.36401, 12.5669, 10.8839]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [19.7915, 4.60205, 4.17081, 5.36365, 12.1382, 10.5731]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 3,
+     "timings": [18.3694, 4.29404, 3.33847, 5.00479, 11.7422, 10.572]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [18.4842, 4.29459, 5.10052, 5.00485, 11.728, 9.54895]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 4,
+     "timings": [18.5389, 4.29446, 3.33871, 5.0051, 11.7194, 9.55856]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [18.369, 4.29465, 3.89441, 5.00519, 11.8033, 9.95764]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 5,
+     "timings": [18.5724, 4.29459, 3.3392, 5.55975, 11.7352, 9.96088]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [18.8527, 4.49692, 3.49139, 5.82083, 12.2761, 10.8842]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 6,
+     "timings": [19.302, 4.39209, 3.41516, 5.11877, 11.986, 10.632]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [18.8523, 4.39471, 3.41434, 5.11905, 12.1317, 11.6512]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 7,
+     "timings": [19.4354, 4.49585, 4.07355, 5.82074, 12.2687, 11.767]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [82.1374, 12.6487, 8.80167, 12.5889, 19.8358, 25.6461]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [83.3447, 12.2018, 7.34903, 12.2969, 20.1865, 25.0158]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 16,
+     "timings": [83.3434, 12.2148, 7.34326, 12.304, 20.2327, 24.43]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 16,
+     "timings": [60.5843, 12.1633, 7.34021, 12.3027, 20.19, 24.9953]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 32,
+     "timings": [60.323, 14.4399, 7.27167, 12.9195, 20.2384, 25.0001]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 32,
+     "timings": [61.2083, 13.1624, 7.63071, 12.3616, 19.3461, 24.3182]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 48,
+     "timings": [61.1194, 14.4652, 7.54956, 12.8177, 19.7463, 24.6148]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 48,
+     "timings": [61.1924, 13.5893, 7.79584, 12.4051, 19.2635, 23.8865]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 64,
+     "timings": [59.8798, 13.08, 7.35901, 13.7302, 19.6852, 24.4442]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 64,
+     "timings": [59.8547, 14.366, 8.24899, 13.4005, 19.7273, 24.4424]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 80,
+     "timings": [59.8462, 14.3026, 7.13834, 13.399, 19.7539, 24.4527]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 80,
+     "timings": [60.2629, 15.2924, 7.82144, 16.49, 20.7387, 24.9893]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 96,
+     "timings": [60.9227, 12.1941, 7.42749, 10.943, 19.7594, 24.6116]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 96,
+     "timings": [61.1757, 12.5504, 7.34741, 11.1904, 19.7835, 24.4414]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 112,
+     "timings": [61.0898, 11.8254, 8.69571, 11.3534, 19.8978, 23.9078]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 112,
+     "timings": [60.2797, 11.6609, 7.3844, 11.2713, 20.2335, 24.6141]
+    },
+    {
+     "rand": 0,
+     "length": 1,
+     "pos": 0,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.11841, 3.69095, 2.78375, 3.3396, 3.89279, 5.00616]
+    },
+    {
+     "rand": 0,
+     "length": 1,
+     "pos": 0,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.6752, 2.91254, 2.37628, 3.41559, 3.98203, 5.12009]
+    },
+    {
+     "rand": 0,
+     "length": 2,
+     "pos": 1,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25845, 2.8443, 2.84485, 3.98291, 3.98248, 5.11978]
+    },
+    {
+     "rand": 0,
+     "length": 2,
+     "pos": 1,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82455, 2.84485, 2.84393, 3.41321, 3.9819, 5.1199]
+    },
+    {
+     "rand": 0,
+     "length": 3,
+     "pos": 2,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25684, 2.93765, 2.84357, 3.41391, 3.98062, 6.82578]
+    },
+    {
+     "rand": 0,
+     "length": 3,
+     "pos": 2,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25568, 2.84579, 2.84412, 3.41214, 3.98187, 5.68903]
+    },
+    {
+     "rand": 0,
+     "length": 4,
+     "pos": 3,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25778, 2.84393, 2.84393, 3.98291, 3.98196, 6.25528]
+    },
+    {
+     "rand": 0,
+     "length": 4,
+     "pos": 3,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25659, 2.8446, 2.84369, 3.41467, 3.98065, 6.82541]
+    },
+    {
+     "rand": 0,
+     "length": 5,
+     "pos": 4,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82486, 2.84521, 2.84357, 3.98328, 3.98062, 4.83551]
+    },
+    {
+     "rand": 0,
+     "length": 5,
+     "pos": 4,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25772, 2.84363, 2.84402, 3.98291, 3.98236, 5.1192]
+    },
+    {
+     "rand": 0,
+     "length": 6,
+     "pos": 5,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25583, 2.84546, 2.84528, 3.41318, 3.98251, 6.25522]
+    },
+    {
+     "rand": 0,
+     "length": 6,
+     "pos": 5,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25754, 2.84491, 2.84363, 3.98297, 3.98141, 5.68771]
+    },
+    {
+     "rand": 0,
+     "length": 7,
+     "pos": 6,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25537, 2.84558, 2.84509, 3.41208, 3.9826, 6.25751]
+    },
+    {
+     "rand": 0,
+     "length": 7,
+     "pos": 6,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82516, 2.84473, 2.84506, 3.41345, 3.98227, 6.82614]
+    },
+    {
+     "rand": 0,
+     "length": 8,
+     "pos": 7,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.82516, 2.84424, 2.84515, 3.98077, 3.9827, 6.82602]
+    },
+    {
+     "rand": 0,
+     "length": 8,
+     "pos": 7,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [6.25912, 2.98965, 2.37598, 3.41397, 3.98187, 6.82452]
+    },
+    {
+     "rand": 0,
+     "length": 9,
+     "pos": 8,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.96564, 2.84482, 2.84399, 3.9823, 3.98026, 5.68915]
+    },
+    {
+     "rand": 0,
+     "length": 9,
+     "pos": 8,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39627, 2.84479, 2.84375, 3.41336, 3.98111, 5.68939]
+    },
+    {
+     "rand": 0,
+     "length": 10,
+     "pos": 9,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39423, 3.41385, 2.84366, 3.98273, 3.98074, 5.68915]
+    },
+    {
+     "rand": 0,
+     "length": 10,
+     "pos": 9,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39453, 2.84525, 2.84357, 3.4136, 3.98074, 5.68976]
+    },
+    {
+     "rand": 0,
+     "length": 11,
+     "pos": 10,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.96359, 2.84506, 2.84357, 3.41431, 3.98062, 6.25989]
+    },
+    {
+     "rand": 0,
+     "length": 11,
+     "pos": 10,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.3941, 2.84406, 2.84366, 3.41409, 3.9805, 5.97403]
+    },
+    {
+     "rand": 0,
+     "length": 12,
+     "pos": 11,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.96249, 2.84351, 2.84424, 3.98187, 3.98264, 6.82492]
+    },
+    {
+     "rand": 0,
+     "length": 12,
+     "pos": 11,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39429, 2.84521, 2.84421, 4.15796, 4.07297, 6.98373]
+    },
+    {
+     "rand": 0,
+     "length": 13,
+     "pos": 12,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14761, 3.49231, 2.90988, 3.49368, 4.07343, 5.82092]
+    },
+    {
+     "rand": 0,
+     "length": 13,
+     "pos": 12,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56638, 2.91031, 2.91025, 3.49362, 4.15759, 5.82037]
+    },
+    {
+     "rand": 0,
+     "length": 14,
+     "pos": 13,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14621, 2.91171, 2.91144, 4.07272, 4.07404, 5.82288]
+    },
+    {
+     "rand": 0,
+     "length": 14,
+     "pos": 13,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56659, 2.91125, 2.91, 4.07468, 4.07324, 6.40103]
+    },
+    {
+     "rand": 0,
+     "length": 15,
+     "pos": 14,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14633, 2.91235, 2.91092, 4.07385, 4.07303, 6.40375]
+    },
+    {
+     "rand": 0,
+     "length": 15,
+     "pos": 14,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.56586, 2.90964, 2.91058, 4.07394, 4.07544, 6.40222]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 15,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.14874, 2.97174, 2.84369, 3.98248, 3.98129, 7.39435]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 15,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [7.39438, 2.84506, 2.84415, 3.98169, 3.98044, 6.82501]
+    },
+    {
+     "rand": 0,
+     "length": 17,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.10751, 2.84409, 2.84357, 3.98291, 5.91876, 7.01566]
+    },
+    {
+     "rand": 0,
+     "length": 17,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.558, 2.91162, 2.91006, 3.49228, 6.05594, 6.40372]
+    },
+    {
+     "rand": 0,
+     "length": 18,
+     "pos": 17,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31543, 2.91245, 2.91068, 3.49164, 6.0574, 6.98514]
+    },
+    {
+     "rand": 0,
+     "length": 18,
+     "pos": 17,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.3158, 2.91119, 3.22354, 3.4939, 6.0546, 6.98434]
+    },
+    {
+     "rand": 0,
+     "length": 19,
+     "pos": 18,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31961, 2.9108, 2.91006, 4.07492, 6.05618, 7.27692]
+    },
+    {
+     "rand": 0,
+     "length": 19,
+     "pos": 18,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89862, 2.9111, 2.91, 3.49252, 6.05518, 7.56543]
+    },
+    {
+     "rand": 0,
+     "length": 20,
+     "pos": 19,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80365, 2.91037, 2.9097, 3.49356, 6.05453, 7.56778]
+    },
+    {
+     "rand": 0,
+     "length": 20,
+     "pos": 19,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31693, 2.91031, 2.43201, 4.07404, 6.05679, 7.56735]
+    },
+    {
+     "rand": 0,
+     "length": 21,
+     "pos": 20,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4752, 2.90982, 2.43155, 3.49374, 6.05478, 6.98538]
+    },
+    {
+     "rand": 0,
+     "length": 21,
+     "pos": 20,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89514, 3.49319, 2.91046, 3.49146, 6.05606, 6.4187]
+    },
+    {
+     "rand": 0,
+     "length": 22,
+     "pos": 21,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31628, 2.91141, 2.91098, 4.07339, 6.05493, 6.98511]
+    },
+    {
+     "rand": 0,
+     "length": 22,
+     "pos": 21,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89676, 2.90964, 2.9108, 3.49313, 6.05508, 7.56705]
+    },
+    {
+     "rand": 0,
+     "length": 23,
+     "pos": 22,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.40887, 2.91144, 2.91046, 3.49152, 6.05606, 7.56653]
+    },
+    {
+     "rand": 0,
+     "length": 23,
+     "pos": 22,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.3165, 2.90976, 2.91019, 3.49371, 6.0545, 7.56796]
+    },
+    {
+     "rand": 0,
+     "length": 24,
+     "pos": 23,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.8075, 2.91064, 2.91107, 3.49277, 6.05582, 8.14835]
+    },
+    {
+     "rand": 0,
+     "length": 24,
+     "pos": 23,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4745, 2.91025, 2.91144, 3.49164, 6.05649, 8.14621]
+    },
+    {
+     "rand": 0,
+     "length": 25,
+     "pos": 24,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5698, 2.91098, 2.91125, 3.49091, 6.05707, 6.9838]
+    },
+    {
+     "rand": 0,
+     "length": 25,
+     "pos": 24,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5493, 2.90964, 2.91068, 4.07388, 6.05725, 6.40152]
+    },
+    {
+     "rand": 0,
+     "length": 26,
+     "pos": 25,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5602, 2.91092, 2.90976, 3.49289, 6.05511, 6.98529]
+    },
+    {
+     "rand": 0,
+     "length": 26,
+     "pos": 25,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5624, 2.91193, 2.91132, 3.49097, 6.05719, 6.98392]
+    },
+    {
+     "rand": 0,
+     "length": 27,
+     "pos": 26,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.0566, 2.91043, 2.91156, 4.07278, 6.05655, 7.56662]
+    },
+    {
+     "rand": 0,
+     "length": 27,
+     "pos": 26,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5653, 2.91235, 2.91092, 4.07339, 6.05505, 7.56699]
+    },
+    {
+     "rand": 0,
+     "length": 28,
+     "pos": 27,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5428, 2.91138, 2.91025, 4.07434, 6.05353, 8.14948]
+    },
+    {
+     "rand": 0,
+     "length": 28,
+     "pos": 27,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5319, 2.91061, 2.91037, 3.49365, 6.05435, 7.85828]
+    },
+    {
+     "rand": 0,
+     "length": 29,
+     "pos": 28,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5408, 3.49091, 2.91147, 3.49158, 6.0563, 6.69354]
+    },
+    {
+     "rand": 0,
+     "length": 29,
+     "pos": 28,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.058, 2.90976, 2.9104, 3.49356, 6.05472, 6.9841]
+    },
+    {
+     "rand": 0,
+     "length": 30,
+     "pos": 29,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5305, 2.91211, 2.91006, 4.07501, 6.05444, 7.2767]
+    },
+    {
+     "rand": 0,
+     "length": 30,
+     "pos": 29,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5299, 2.91125, 2.91, 3.49234, 6.05511, 7.5654]
+    },
+    {
+     "rand": 0,
+     "length": 31,
+     "pos": 30,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5635, 2.91248, 2.91043, 3.49188, 6.05585, 8.14816]
+    },
+    {
+     "rand": 0,
+     "length": 31,
+     "pos": 30,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5658, 2.91177, 2.90976, 3.67499, 6.05414, 8.14984]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 31,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.0592, 2.91092, 2.91132, 3.49222, 6.05582, 8.18005]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 31,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.5265, 3.49319, 2.91037, 4.0741, 6.0546, 8.14941]
+    },
+    {
+     "rand": 0,
+     "length": 48,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31314, 3.49344, 2.90988, 3.49252, 6.0549, 6.98428]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 48,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80371, 2.91217, 2.91006, 3.49219, 6.02676, 6.82535]
+    },
+    {
+     "rand": 0,
+     "length": 80,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.60156, 2.84485, 2.84528, 3.98007, 5.9198, 6.82608]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 80,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.6051, 2.84491, 2.84503, 3.41306, 5.91818, 6.82465]
+    },
+    {
+     "rand": 0,
+     "length": 112,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.26617, 2.91061, 2.91095, 3.49289, 6.05606, 6.98361]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 112,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4763, 2.91092, 2.9097, 4.07498, 6.05493, 6.98346]
+    },
+    {
+     "rand": 0,
+     "length": 144,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31686, 2.99121, 2.91113, 3.49246, 6.05679, 6.98303]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 144,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31616, 2.91147, 2.9115, 4.07285, 6.05643, 6.98334]
+    },
+    {
+     "rand": 0,
+     "length": 176,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80032, 2.96719, 2.84479, 3.41168, 5.9198, 6.82394]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 176,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.67316, 3.41391, 2.84357, 3.9823, 5.91647, 6.8244]
+    },
+    {
+     "rand": 0,
+     "length": 208,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.10336, 2.84515, 2.8436, 3.41373, 5.91672, 6.95569]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 208,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80124, 2.91153, 2.91031, 3.49228, 6.05588, 6.9834]
+    },
+    {
+     "rand": 0,
+     "length": 240,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [8.80295, 2.91229, 2.91071, 4.07416, 6.0549, 6.98337]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 240,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.4742, 2.91199, 2.91132, 4.07336, 6.05588, 6.98352]
+    },
+    {
+     "rand": 0,
+     "length": 272,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89801, 2.91055, 2.91043, 4.0741, 6.05685, 6.98309]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 272,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.95737, 2.91116, 2.90988, 3.4928, 6.05469, 8.14682]
+    },
+    {
+     "rand": 0,
+     "length": 304,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.89789, 2.9115, 2.91052, 3.49139, 6.05606, 6.98355]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 304,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [9.31445, 3.49191, 2.91, 4.07465, 6.05588, 6.98267]
+    },
+    {
+     "rand": 0,
+     "length": 336,
+     "pos": 16,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.0573, 2.90958, 2.91061, 4.07385, 6.05716, 6.98303]
+    },
+    {
+     "rand": 0,
+     "length": 16,
+     "pos": 336,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [10.477, 2.91068, 2.90994, 4.07471, 6.05594, 6.98254]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.388, 3.49283, 2.9115, 4.65839, 6.05487, 8.14886]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3247, 3.4935, 2.91006, 4.65686, 6.05685, 7.56671]
+    },
+    {
+     "rand": 0,
+     "length": 96,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3622, 3.49271, 2.91147, 4.65665, 6.0545, 7.02835]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 96,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.386, 4.07336, 2.99207, 4.65598, 6.05518, 7.56528]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3459, 3.49371, 2.91019, 5.23688, 6.05719, 7.56528]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.2965, 3.49115, 2.91129, 4.65588, 6.15326, 7.39355]
+    },
+    {
+     "rand": 0,
+     "length": 160,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.0637, 3.41318, 2.84503, 4.55042, 5.91647, 7.3967]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 160,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.3503, 3.49176, 2.91031, 4.65604, 6.05685, 7.56494]
+    },
+    {
+     "rand": 0,
+     "length": 192,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3099, 3.49225, 2.91135, 5.23724, 6.05527, 7.56622]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3198, 3.49219, 2.91037, 4.65598, 6.05719, 7.56488]
+    },
+    {
+     "rand": 0,
+     "length": 224,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.2952, 3.49216, 2.91132, 4.65591, 6.05408, 7.56604]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.1042, 3.49127, 2.91071, 5.23849, 6.05469, 7.56561]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3484, 3.49374, 2.9097, 5.2374, 6.05701, 7.565]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.315, 3.49188, 2.91147, 4.65588, 6.05453, 7.56616]
+    },
+    {
+     "rand": 0,
+     "length": 288,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3441, 3.49362, 2.90967, 5.23743, 6.0571, 7.56494]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3111, 3.49203, 2.91144, 4.65598, 6.05423, 7.02655]
+    },
+    {
+     "rand": 0,
+     "length": 320,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.351, 3.49399, 2.91061, 4.65619, 6.05463, 7.5668]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.2953, 3.49265, 2.90976, 5.23813, 6.05576, 7.56543]
+    },
+    {
+     "rand": 0,
+     "length": 352,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3149, 3.49344, 2.91061, 4.65604, 6.03882, 7.39447]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.1309, 3.4144, 2.84375, 4.55066, 5.91797, 7.39395]
+    },
+    {
+     "rand": 0,
+     "length": 96,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.9673, 4.39178, 3.98502, 5.68802, 12.2158, 9.79004]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 96,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.3863, 4.65704, 4.36215, 5.82217, 12.2594, 9.92883]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [13.3836, 3.49438, 2.91, 4.65646, 6.05786, 7.56592]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.3592, 4.07422, 2.91074, 4.6561, 6.05508, 7.56729]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2201, 4.49365, 3.49548, 5.23779, 12.282, 9.92957]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.5094, 4.65607, 4.07501, 5.23773, 12.2839, 9.78976]
+    },
+    {
+     "rand": 0,
+     "length": 160,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2368, 4.49481, 3.49405, 5.23782, 12.2729, 9.55948]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 160,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.9722, 4.39432, 3.9805, 5.68884, 11.9783, 9.56927]
+    },
+    {
+     "rand": 0,
+     "length": 192,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.7951, 4.39105, 3.98166, 5.68762, 11.9787, 9.70343]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.0654, 4.49387, 3.49393, 5.23749, 12.2558, 9.93204]
+    },
+    {
+     "rand": 0,
+     "length": 224,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2206, 4.49423, 3.49313, 5.81918, 12.3491, 9.92944]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4093, 4.49619, 3.49396, 5.23752, 12.2493, 9.93057]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.3429, 4.49191, 3.49307, 5.23834, 12.2439, 9.931]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2208, 4.49631, 3.49133, 5.23874, 12.2524, 9.93307]
+    },
+    {
+     "rand": 0,
+     "length": 288,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4019, 4.49548, 4.07321, 5.82019, 12.2643, 9.92896]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2219, 4.49326, 4.07486, 5.81824, 12.2426, 10.0083]
+    },
+    {
+     "rand": 0,
+     "length": 320,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4031, 4.49228, 3.49356, 5.81842, 12.2625, 9.9292]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2298, 4.49011, 4.07404, 5.23801, 12.2509, 9.92938]
+    },
+    {
+     "rand": 0,
+     "length": 352,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4024, 4.49252, 4.48019, 5.23929, 12.2448, 9.92801]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.3961, 4.49463, 3.49127, 5.82095, 12.2545, 9.92953]
+    },
+    {
+     "rand": 0,
+     "length": 384,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.1897, 4.39319, 3.98059, 5.11954, 11.9842, 9.70264]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 384,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.0194, 4.39322, 3.4144, 5.11829, 11.9739, 9.70193]
+    },
+    {
+     "rand": 0,
+     "length": 160,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0022, 7.58133, 4.17834, 6.82614, 14.9117, 15.1902]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 160,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8383, 7.61853, 5.68222, 6.42502, 14.8436, 15.1884]
+    },
+    {
+     "rand": 0,
+     "length": 96,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [26.6074, 5.19, 3.98178, 5.68994, 11.9795, 12.5133]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 96,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [26.2959, 6.43723, 6.11209, 6.40283, 12.2518, 12.3815]
+    },
+    {
+     "rand": 0,
+     "length": 192,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.7928, 7.36676, 5.34048, 6.28085, 14.532, 14.8455]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.6443, 9.47629, 5.49725, 6.98343, 14.8391, 14.9799]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.2305, 6.6604, 4.07324, 5.23874, 12.2438, 9.78958]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [19.4104, 4.49411, 3.49182, 5.32007, 12.2456, 9.81171]
+    },
+    {
+     "rand": 0,
+     "length": 224,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0679, 7.35788, 5.43338, 7.39261, 14.5225, 14.8383]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.1096, 7.35452, 5.35727, 6.2818, 14.5179, 14.8432]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.0682, 3.41467, 2.84436, 5.11792, 5.9183, 6.8678]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.1716, 4.07504, 2.4324, 4.65665, 6.05612, 7.02811]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.9059, 6.26379, 5.71594, 6.98315, 14.8698, 15.1806]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8565, 7.34436, 5.55649, 6.42557, 14.8679, 14.9873]
+    },
+    {
+     "rand": 0,
+     "length": 288,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.5211, 7.68036, 5.36917, 6.82516, 14.5155, 14.8503]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0702, 7.37189, 5.39584, 6.82404, 14.5167, 14.8544]
+    },
+    {
+     "rand": 0,
+     "length": 320,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.3047, 7.56024, 5.3223, 6.13895, 14.1961, 14.5182]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.9824, 8.21036, 6.22211, 6.82529, 14.5275, 14.8399]
+    },
+    {
+     "rand": 0,
+     "length": 352,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0623, 7.3078, 5.79688, 6.82449, 14.5244, 14.8375]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.0232, 7.30624, 6.76001, 6.48309, 14.5029, 15.2416]
+    },
+    {
+     "rand": 0,
+     "length": 384,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.8378, 7.35287, 5.38654, 6.27789, 14.5254, 14.8481]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 384,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.1062, 7.77869, 5.53683, 6.82504, 14.526, 14.8414]
+    },
+    {
+     "rand": 0,
+     "length": 416,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.4464, 7.4053, 6.05798, 7.56473, 14.8439, 15.1773]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 416,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [33.7341, 7.31909, 5.94492, 6.2822, 14.5235, 14.925]
+    },
+    {
+     "rand": 0,
+     "length": 448,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.3788, 7.1264, 5.25815, 6.1424, 14.1848, 14.5244]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 448,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.335, 7.0914, 6.0715, 6.67267, 14.2007, 14.5084]
+    },
+    {
+     "rand": 0,
+     "length": 288,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [62.0607, 12.2634, 7.65781, 12.0341, 19.6629, 24.4556]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.8491, 12.9821, 7.496, 12.3069, 19.499, 24.9975]
+    },
+    {
+     "rand": 0,
+     "length": 224,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [54.2197, 11.8848, 6.14853, 11.19, 17.4627, 22.8155]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [53.1189, 11.6595, 6.07993, 11.1922, 17.277, 22.6726]
+    },
+    {
+     "rand": 0,
+     "length": 320,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [59.7861, 12.6064, 7.13016, 12.0278, 19.7986, 24.4496]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [60.7394, 11.0449, 7.27625, 12.3035, 20.1904, 25.0021]
+    },
+    {
+     "rand": 0,
+     "length": 192,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [47.0997, 11.7596, 6.53442, 11.1837, 17.4047, 19.3844]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [46.0598, 11.3365, 7.40152, 10.9432, 16.8849, 19.4274]
+    },
+    {
+     "rand": 0,
+     "length": 352,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [60.735, 12.132, 7.32855, 12.3084, 20.3665, 24.4464]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [60.7548, 12.1464, 7.38986, 12.3055, 20.2956, 24.5251]
+    },
+    {
+     "rand": 0,
+     "length": 160,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [39.2573, 11.5516, 5.25012, 10.0257, 14.1887, 17.3143]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 160,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [39.9131, 10.5284, 5.38397, 10.2957, 14.4957, 17.7169]
+    },
+    {
+     "rand": 0,
+     "length": 384,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1407, 13.7155, 7.75269, 12.3755, 19.815, 24.4452]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 384,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.0387, 12.1447, 8.64322, 12.3102, 19.8634, 24.4316]
+    },
+    {
+     "rand": 0,
+     "length": 128,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.2982, 7.89825, 5.64154, 6.52869, 13.873, 14.2013]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [32.7051, 6.11887, 5.927, 6.27823, 14.5152, 14.6285]
+    },
+    {
+     "rand": 0,
+     "length": 416,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1556, 12.7409, 7.4859, 11.988, 19.2395, 23.8948]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 416,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [59.9988, 12.1103, 7.2959, 12.2992, 20.2386, 24.6939]
+    },
+    {
+     "rand": 0,
+     "length": 96,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [25.4261, 6.29041, 4.71616, 6.29706, 12.0063, 12.0226]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 96,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [25.972, 6.20447, 5.94028, 5.6886, 11.9608, 12.0987]
+    },
+    {
+     "rand": 0,
+     "length": 448,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1124, 13.3752, 7.26825, 12.2991, 20.2469, 25.0816]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 448,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1696, 11.8916, 8.93359, 12.0298, 19.7896, 24.4532]
+    },
+    {
+     "rand": 0,
+     "length": 64,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.8863, 6.25116, 4.87225, 5.1192, 11.9944, 9.56824]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 64,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [18.7883, 4.38986, 3.41409, 5.1181, 11.9814, 9.56363]
+    },
+    {
+     "rand": 0,
+     "length": 480,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.3347, 11.9128, 7.19244, 12.0362, 19.7202, 24.447]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 480,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [59.8067, 12.236, 7.12195, 12.0302, 19.7481, 24.4597]
+    },
+    {
+     "rand": 0,
+     "length": 32,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [12.4426, 4.50775, 3.90607, 4.44876, 5.78671, 7.22977]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 32,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [11.7609, 3.33716, 2.7807, 5.00497, 5.97516, 6.94635]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1639, 13.0982, 7.54596, 12.3028, 20.2587, 25.0021]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.1648, 12.3985, 7.24533, 12.151, 19.7421, 24.4339]
+    },
+    {
+     "rand": 0,
+     "length": 544,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [60.394, 12.6896, 8.43698, 12.3044, 20.1819, 24.4391]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 544,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [60.6132, 12.6384, 7.38919, 12.2959, 20.1061, 24.9835]
+    },
+    {
+     "rand": 0,
+     "length": 576,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.2282, 12.1586, 7.26031, 12.2986, 20.2141, 25.0247]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 576,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [61.176, 12.1472, 7.27878, 12.3003, 20.1731, 24.9931]
+    },
+    {
+     "rand": 0,
+     "length": 544,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [138.501, 16.9464, 13.835, 16.5807, 30.6148, 66.7169]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 544,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [135.018, 17.1711, 13.3427, 16.2558, 29.9411, 67.8819]
+    },
+    {
+     "rand": 0,
+     "length": 480,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [128.421, 15.3346, 11.6846, 15.52, 27.3847, 63.9347]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 480,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [128.503, 16.0228, 11.9346, 15.6722, 27.2048, 63.4137]
+    },
+    {
+     "rand": 0,
+     "length": 576,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [135.663, 16.0656, 13.7206, 16.2163, 29.9239, 65.9027]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 576,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.866, 16.8493, 13.6977, 15.8795, 29.4312, 44.2085]
+    },
+    {
+     "rand": 0,
+     "length": 448,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [119.479, 17.1747, 11.838, 15.5685, 27.1611, 39.3611]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 448,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [119.535, 16.7614, 12.0628, 15.5526, 27.1964, 39.2803]
+    },
+    {
+     "rand": 0,
+     "length": 608,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.584, 15.2579, 13.6059, 16.2202, 29.8583, 43.1586]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 608,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.675, 16.5534, 13.9389, 16.2237, 29.9989, 43.3761]
+    },
+    {
+     "rand": 0,
+     "length": 416,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [112.401, 16.1571, 10.7996, 14.7587, 24.7398, 36.8209]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 416,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [113.815, 15.8581, 11.8591, 14.7839, 24.7631, 36.4034]
+    },
+    {
+     "rand": 0,
+     "length": 640,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.462, 16.9474, 13.3106, 16.2095, 30.1366, 44.1531]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 640,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.643, 16.3849, 13.0272, 16.2256, 29.9929, 43.1549]
+    },
+    {
+     "rand": 0,
+     "length": 384,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [108.076, 14.34, 12.2207, 14.2794, 25.4013, 33.8247]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 384,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [108.097, 13.9601, 12.2955, 13.9787, 24.7549, 34.1514]
+    },
+    {
+     "rand": 0,
+     "length": 672,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [131.381, 16.4639, 13.1267, 16.2209, 29.9392, 44.1881]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 672,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.675, 16.0668, 13.0179, 16.2181, 29.9894, 43.3811]
+    },
+    {
+     "rand": 0,
+     "length": 352,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [100.629, 15.1902, 11.5719, 13.3993, 22.5471, 31.7377]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [101.011, 13.8522, 11.5599, 13.0836, 21.9164, 31.6512]
+    },
+    {
+     "rand": 0,
+     "length": 704,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.46, 17.7892, 13.7096, 16.2119, 29.8556, 44.0869]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 704,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.25, 16.451, 13.2769, 16.2153, 30.0705, 44.1553]
+    },
+    {
+     "rand": 0,
+     "length": 320,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [92.7417, 13.9932, 11.0943, 13.3992, 22.3711, 29.4379]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [93.2358, 14.1314, 11.2714, 13.6873, 22.8383, 30.0165]
+    },
+    {
+     "rand": 0,
+     "length": 736,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [134.745, 16.081, 13.1241, 16.2191, 29.9339, 43.178]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 736,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [136.122, 16.187, 13.6745, 16.2075, 29.9332, 43.6632]
+    },
+    {
+     "rand": 0,
+     "length": 288,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [87.6805, 11.9753, 7.83975, 12.3578, 19.3011, 26.4308]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [66.5029, 11.7088, 7.80991, 12.8635, 19.3154, 26.4089]
+    },
+    {
+     "rand": 0,
+     "length": 768,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.601, 16.4218, 13.6396, 16.2145, 30.5279, 44.11]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 768,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [136.469, 16.5609, 13.5163, 16.2183, 29.853, 44.0295]
+    },
+    {
+     "rand": 0,
+     "length": 256,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [79.1743, 12.3018, 8.55832, 12.0415, 19.686, 24.5596]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [80.7642, 11.704, 7.64911, 11.7786, 20.0809, 24.4276]
+    },
+    {
+     "rand": 0,
+     "length": 800,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.648, 16.6741, 13.424, 16.5781, 30.2007, 43.2002]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 800,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [133.779, 16.8762, 14.6902, 16.634, 29.9331, 43.6993]
+    },
+    {
+     "rand": 0,
+     "length": 224,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [52.8935, 11.6741, 6.85757, 10.9294, 16.9651, 22.2518]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [53.0233, 11.5467, 5.99811, 10.9316, 16.9606, 22.2612]
+    },
+    {
+     "rand": 0,
+     "length": 832,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [132.82, 16.8856, 13.6199, 16.5809, 30.5199, 44.1207]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 832,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [135.34, 16.314, 13.4511, 16.5339, 29.9603, 43.377]
+    },
+    {
+     "rand": 0,
+     "length": 192,
+     "pos": 512,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [47.135, 10.5505, 5.97287, 10.9413, 16.9459, 19.3724]
+    },
+    {
+     "rand": 0,
+     "length": 512,
+     "pos": 192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [46.1012, 11.3968, 6.42538, 10.9448, 16.9479, 19.4523]
+    },
+    {
+     "rand": 0,
+     "length": 1056,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [242.479, 25.0466, 18.0077, 26.1916, 49.9959, 108.983]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1056,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [242.283, 25.7457, 19.2576, 25.2754, 48.4947, 109.017]
+    },
+    {
+     "rand": 0,
+     "length": 992,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [233.412, 27.2234, 18.9275, 24.5743, 47.039, 104.872]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 992,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [233.217, 26.9394, 17.6699, 24.6243, 45.7172, 105.882]
+    },
+    {
+     "rand": 0,
+     "length": 1088,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [240.158, 24.7205, 19.4117, 25.3255, 49.9713, 109.028]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1088,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [242.336, 25.2271, 19.4767, 25.8334, 49.681, 108.899]
+    },
+    {
+     "rand": 0,
+     "length": 960,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [228.318, 24.7053, 17.8812, 24.8681, 46.5297, 101.787]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 960,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [225.928, 25.6858, 17.6496, 24.6402, 46.3901, 105.31]
+    },
+    {
+     "rand": 0,
+     "length": 1120,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [245.109, 24.2989, 19.2703, 25.3048, 48.9378, 108.826]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1120,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [241.601, 24.6587, 19.1183, 25.5107, 48.8923, 108.053]
+    },
+    {
+     "rand": 0,
+     "length": 928,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [220.913, 23.0207, 17.7467, 23.6028, 43.8857, 100.453]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 928,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [221.391, 25.23, 17.8063, 23.588, 43.0005, 99.3942]
+    },
+    {
+     "rand": 0,
+     "length": 1152,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [237.256, 24.5899, 20.515, 25.2827, 48.7053, 108.131]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1152,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [236.338, 24.0626, 19.1026, 25.2632, 49.0011, 109.828]
+    },
+    {
+     "rand": 0,
+     "length": 896,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [208.641, 21.9318, 17.8419, 23.3191, 43.8317, 97.2586]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 896,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [213.317, 22.002, 19.6795, 23.0484, 43.8279, 96.1701]
+    },
+    {
+     "rand": 0,
+     "length": 1184,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [239.947, 28.3499, 19.4035, 25.3118, 50.0066, 109.922]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1184,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [238.53, 24.6194, 18.4276, 25.2713, 49.722, 108.747]
+    },
+    {
+     "rand": 0,
+     "length": 864,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [202.503, 24.2092, 17.6729, 22.228, 41.4246, 95.6873]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 864,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [203.295, 23.7831, 17.4535, 22.2305, 43.0862, 96.1432]
+    },
+    {
+     "rand": 0,
+     "length": 1216,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [236.069, 25.1651, 17.6169, 25.2897, 50.0156, 109.596]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1216,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [237.797, 24.2717, 19.2612, 25.3006, 49.1679, 110.796]
+    },
+    {
+     "rand": 0,
+     "length": 832,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [199.301, 23.8393, 17.5872, 22.2315, 41.2264, 92.3593]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 832,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [196.967, 22.4372, 18.2071, 22.2354, 42.618, 94.7274]
+    },
+    {
+     "rand": 0,
+     "length": 1248,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [235.285, 24.7, 21.3392, 25.2686, 48.8295, 108.128]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1248,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [237.191, 24.4529, 19.9717, 25.2703, 49.0141, 108.089]
+    },
+    {
+     "rand": 0,
+     "length": 800,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [189.638, 20.9505, 17.0963, 21.3753, 39.7988, 91.3496]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 800,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [196.752, 22.7901, 17.0067, 21.6048, 40.6103, 90.0811]
+    },
+    {
+     "rand": 0,
+     "length": 1280,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [238.31, 24.1189, 18.8947, 25.271, 50.1558, 85.0864]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1280,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [240.184, 24.5245, 18.444, 25.2807, 48.6552, 108.827]
+    },
+    {
+     "rand": 0,
+     "length": 768,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [188.159, 20.4077, 17.365, 21.1299, 39.7868, 89.2351]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 768,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [182.935, 20.3677, 16.7651, 20.6643, 40.6448, 88.2446]
+    },
+    {
+     "rand": 0,
+     "length": 1312,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [241.156, 24.2002, 19.0661, 25.2712, 49.3878, 107.737]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1312,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [237.23, 24.5647, 19.1079, 25.2867, 49.9756, 84.5906]
+    },
+    {
+     "rand": 0,
+     "length": 736,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [178.581, 20.3314, 15.4299, 19.7475, 37.3311, 86.1502]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 736,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [178.504, 20.8159, 14.9846, 19.7489, 36.5512, 84.8781]
+    },
+    {
+     "rand": 0,
+     "length": 1344,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [241.062, 26.6807, 18.7862, 25.8217, 48.8749, 101.951]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 1344,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [237.313, 24.1909, 18.7962, 25.3183, 50.8513, 86.5087]
+    },
+    {
+     "rand": 0,
+     "length": 704,
+     "pos": 1024,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [173.447, 21.0492, 14.7362, 20.1884, 37.3505, 84.0259]
+    },
+    {
+     "rand": 0,
+     "length": 1024,
+     "pos": 704,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [173.814, 21.2076, 17.043, 20.1974, 37.6187, 82.3768]
+    },
+    {
+     "rand": 0,
+     "length": 2080,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [454.027, 40.0562, 30.0759, 44.7286, 108.645, 188.079]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2080,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [445.591, 40.3751, 30.0654, 44.1597, 110.231, 190.714]
+    },
+    {
+     "rand": 0,
+     "length": 2016,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [441.517, 40.8112, 28.9183, 44.893, 106.071, 183.535]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2016,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [441.059, 40.9737, 28.0035, 46.2073, 110.571, 192.696]
+    },
+    {
+     "rand": 0,
+     "length": 2112,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [451.75, 40.1884, 29.9901, 43.7478, 108.713, 188.359]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2112,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [451.534, 40.088, 29.818, 44.2516, 109.905, 187.023]
+    },
+    {
+     "rand": 0,
+     "length": 1984,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [432.954, 42.1906, 28.3374, 44.1186, 104.288, 179.956]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1984,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [431.372, 40.538, 28.2961, 44.9335, 105.102, 181.032]
+    },
+    {
+     "rand": 0,
+     "length": 2144,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [447.832, 40.3836, 29.69, 43.7528, 111.65, 192.547]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2144,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [457.614, 40.1498, 29.5872, 44.1567, 110.044, 189.727]
+    },
+    {
+     "rand": 0,
+     "length": 1952,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [431.871, 39.1869, 28.5782, 42.9586, 102.388, 180.337]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1952,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [424.863, 39.3266, 28.2816, 42.8932, 103.761, 183.588]
+    },
+    {
+     "rand": 0,
+     "length": 2176,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [447.869, 40.1339, 29.7284, 44.3579, 108.944, 187.875]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2176,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [448.882, 40.0538, 30.3849, 43.7782, 110.964, 190.586]
+    },
+    {
+     "rand": 0,
+     "length": 1920,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [425.23, 38.6399, 28.4105, 41.637, 100.447, 175.036]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1920,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [421.488, 38.3947, 27.7912, 41.5609, 104.072, 175.616]
+    },
+    {
+     "rand": 0,
+     "length": 2208,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [447.76, 40.0618, 29.554, 43.7648, 114.603, 189.354]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2208,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [448.523, 40.2057, 29.7743, 44.8427, 108.49, 186.046]
+    },
+    {
+     "rand": 0,
+     "length": 1888,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [417.833, 39.8739, 27.9604, 42.0225, 100.281, 176.26]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1888,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [411.831, 39.3219, 27.4374, 41.9511, 100.32, 181.954]
+    },
+    {
+     "rand": 0,
+     "length": 2240,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [453.717, 40.1127, 29.073, 43.7595, 109.749, 190.678]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2240,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [450.333, 40.7965, 29.1663, 44.2082, 110.044, 186.888]
+    },
+    {
+     "rand": 0,
+     "length": 1856,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [407.977, 38.7741, 27.7686, 41.9483, 100.885, 182.77]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1856,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [412.682, 38.6863, 28.761, 42.8409, 99.5102, 171.827]
+    },
+    {
+     "rand": 0,
+     "length": 2272,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [450.947, 40.7929, 29.7213, 43.7564, 109.333, 186.417]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2272,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [442.288, 40.0326, 29.6562, 43.7818, 107.293, 187.84]
+    },
+    {
+     "rand": 0,
+     "length": 1824,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [401.501, 38.234, 27.4296, 40.5252, 101.068, 173.632]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1824,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [406.815, 38.1781, 26.9536, 40.516, 99.1069, 169.635]
+    },
+    {
+     "rand": 0,
+     "length": 2304,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [442.523, 40.0122, 29.7204, 43.8314, 107.704, 186.702]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2304,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [445.289, 40.0029, 29.9774, 43.7588, 108.223, 187.814]
+    },
+    {
+     "rand": 0,
+     "length": 1792,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [392.799, 36.087, 27.058, 39.0868, 101.794, 172.948]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1792,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [394.072, 35.7074, 26.9266, 39.7837, 98.9095, 167.308]
+    },
+    {
+     "rand": 0,
+     "length": 2336,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [445.395, 40.0758, 30.3587, 44.1437, 108.864, 187.098]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2336,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [448.597, 40.1552, 29.9954, 43.7553, 113.788, 188.483]
+    },
+    {
+     "rand": 0,
+     "length": 1760,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [386.275, 36.4207, 26.0775, 39.4449, 96.6059, 163.368]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1760,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [391.909, 36.3597, 25.88, 39.449, 94.7328, 163.755]
+    },
+    {
+     "rand": 0,
+     "length": 2368,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [443.121, 40.0084, 29.8257, 43.761, 115.259, 189.382]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 2368,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [445.415, 40.2486, 30.4509, 44.1371, 106.577, 186.395]
+    },
+    {
+     "rand": 0,
+     "length": 1728,
+     "pos": 2048,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [383.342, 36.3046, 26.4051, 39.4576, 97.3996, 168.835]
+    },
+    {
+     "rand": 0,
+     "length": 2048,
+     "pos": 1728,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [381.408, 37.6736, 24.5656, 39.8441, 98.2462, 161.589]
+    },
+    {
+     "rand": 0,
+     "length": 4128,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [862.64, 91.1139, 52.1069, 111.637, 196.042, 353.393]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4128,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [856.811, 92.312, 51.1689, 113.637, 188.546, 348.712]
+    },
+    {
+     "rand": 0,
+     "length": 4064,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [851.847, 90.0755, 49.6645, 115.842, 183.414, 347.497]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4064,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [853.834, 89.7112, 50.8238, 111.813, 186.072, 349.171]
+    },
+    {
+     "rand": 0,
+     "length": 4160,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [861.364, 98.2065, 50.9188, 107.891, 187.197, 359.86]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4160,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [864.608, 91.0124, 50.6924, 106.989, 188.542, 346.872]
+    },
+    {
+     "rand": 0,
+     "length": 4032,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [846.832, 90.5348, 49.1585, 116.984, 186.611, 345.293]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4032,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [853.842, 87.6995, 49.9735, 107.91, 187.922, 345.132]
+    },
+    {
+     "rand": 0,
+     "length": 4192,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [858.15, 91.8838, 50.4437, 112.718, 191.6, 350.349]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [862.906, 91.3749, 50.5793, 114.376, 186.402, 350.429]
+    },
+    {
+     "rand": 0,
+     "length": 4000,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [840.977, 89.2648, 49.2388, 109.59, 189.733, 342.376]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4000,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [842.82, 90.4395, 50.176, 105.134, 180.293, 341.31]
+    },
+    {
+     "rand": 0,
+     "length": 4224,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [862.448, 91.8246, 50.5121, 115.727, 190.121, 350.142]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4224,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [868.573, 96.9482, 50.5145, 110.116, 191.144, 350.558]
+    },
+    {
+     "rand": 0,
+     "length": 3968,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [835.184, 90.0071, 49.1924, 115.559, 183.647, 338.854]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3968,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [834.145, 91.4562, 50.1855, 113.801, 183.727, 340.587]
+    },
+    {
+     "rand": 0,
+     "length": 4256,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [872.016, 90.5577, 51.2791, 111.38, 188.541, 344.318]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4256,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [863.411, 93.5924, 52.6759, 105.439, 184.924, 348.373]
+    },
+    {
+     "rand": 0,
+     "length": 3936,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [830.331, 89.0141, 51.4615, 102.801, 179.944, 336.083]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3936,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [831.407, 86.383, 48.6688, 104.139, 183.209, 333.448]
+    },
+    {
+     "rand": 0,
+     "length": 4288,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [866.168, 90.9894, 50.5911, 114.307, 194.199, 360.083]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4288,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [871.414, 91.8177, 50.4294, 112.487, 190.339, 346.447]
+    },
+    {
+     "rand": 0,
+     "length": 3904,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [822.387, 86.2927, 48.4921, 114.083, 180.91, 332.131]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3904,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [822.012, 87.7258, 49.0082, 109.131, 183.21, 334.434]
+    },
+    {
+     "rand": 0,
+     "length": 4320,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [860.465, 91.3078, 50.398, 110.92, 190.166, 353.657]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4320,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [862.696, 90.6675, 50.6821, 117.993, 185.901, 367.193]
+    },
+    {
+     "rand": 0,
+     "length": 3872,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [826.523, 85.8861, 47.8752, 102.28, 176.37, 329.488]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3872,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [814.116, 88.7078, 48.4882, 104.631, 178.554, 328.728]
+    },
+    {
+     "rand": 0,
+     "length": 4352,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [861.87, 92.9443, 50.9438, 108.358, 190.432, 349.214]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4352,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [863.377, 96.7597, 50.4687, 110.51, 193.014, 358.311]
+    },
+    {
+     "rand": 0,
+     "length": 3840,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [807.189, 87.8578, 48.0795, 109.53, 179.215, 327.69]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3840,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [810.075, 86.1051, 50.3606, 106.047, 183.214, 327.398]
+    },
+    {
+     "rand": 0,
+     "length": 4384,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [859.144, 92.5533, 51.6586, 114.349, 186.136, 364.527]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4384,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [873.417, 91.2372, 51.4794, 113.414, 189.054, 344.522]
+    },
+    {
+     "rand": 0,
+     "length": 3808,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [801.04, 85.2227, 47.1151, 107.361, 173.645, 336.647]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3808,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [817.065, 84.855, 46.7564, 99.6801, 172.87, 335.872]
+    },
+    {
+     "rand": 0,
+     "length": 4416,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [874.648, 90.9465, 50.8135, 117.818, 190.801, 352.562]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 4416,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [862.462, 96.4752, 51.0508, 115.422, 190.183, 347.658]
+    },
+    {
+     "rand": 0,
+     "length": 3776,
+     "pos": 4096,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [796.927, 85.9395, 47.2575, 98.5073, 173.833, 326.692]
+    },
+    {
+     "rand": 0,
+     "length": 4096,
+     "pos": 3776,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [808.268, 83.5579, 48.639, 104.968, 175.673, 324.583]
+    },
+    {
+     "rand": 0,
+     "length": 8160,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1680.43, 153.768, 118.389, 192.535, 362.724, 677.851]
+    },
+    {
+     "rand": 0,
+     "length": 8128,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1667.23, 153.137, 113.497, 192.052, 346.735, 670.567]
+    },
+    {
+     "rand": 0,
+     "length": 8096,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1667.05, 151.697, 115.733, 191.545, 350.627, 690.464]
+    },
+    {
+     "rand": 0,
+     "length": 8064,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1663.22, 156.879, 114.128, 191.418, 351.663, 660.921]
+    },
+    {
+     "rand": 0,
+     "length": 8032,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1652.32, 149.24, 113.945, 188.734, 343.936, 665.206]
+    },
+    {
+     "rand": 0,
+     "length": 8000,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1646.55, 149.333, 115.719, 186.366, 340.73, 650.202]
+    },
+    {
+     "rand": 0,
+     "length": 7968,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1645.14, 150.258, 115.065, 188.167, 344.599, 673.692]
+    },
+    {
+     "rand": 0,
+     "length": 7936,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1640.06, 150.649, 115.488, 189.351, 335.769, 658.77]
+    },
+    {
+     "rand": 0,
+     "length": 7904,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1637.99, 148.926, 118.746, 190.774, 342.822, 653.496]
+    },
+    {
+     "rand": 0,
+     "length": 7872,
+     "pos": 8192,
+     "seek_char": 0,
+     "max_char": 127,
+     "alignment": 0,
+     "timings": [1623.98, 146.64, 111.592, 187.24, 335.256, 653.042]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [9.05392, 3.19763, 5.22623, 3.72821, 6.41821, 6.39209]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [9.05508, 3.19751, 2.6662, 3.72708, 6.06436, 5.87982]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.1,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.0025, 3.19641, 3.19714, 3.72696, 6.71982, 9.55328]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.1,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.0312, 3.41446, 2.84964, 3.98166, 6.97046, 8.664]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.25,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.7376, 3.41403, 3.41248, 3.9834, 7.73499, 13.141]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.25,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [11.1032, 2.78268, 2.78455, 3.89471, 7.62247, 12.0428]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.33,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [11.9408, 3.33594, 3.33841, 3.89258, 7.37308, 14.7631]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.33,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [11.8555, 3.4144, 3.41174, 3.98343, 8.51868, 14.2755]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.5,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [11.8699, 3.49411, 3.4921, 4.07657, 8.34122, 17.0547]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.5,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [12.6, 3.4924, 2.91357, 4.07553, 8.93253, 16.6242]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.66,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.5145, 3.4118, 3.41443, 3.98111, 7.32553, 14.5878]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.66,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.8718, 3.49127, 2.84885, 3.98123, 6.33359, 13.7819]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.75,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.364, 3.41187, 3.41473, 3.98123, 6.59189, 13.116]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.75,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [10.0075, 2.84653, 3.41193, 3.98352, 6.18884, 12.2724]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 0.9,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [9.07022, 3.41296, 3.41348, 3.98184, 5.25287, 8.80731]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 0.9,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [8.93613, 3.41385, 2.84882, 3.98154, 5.0672, 8.4877]
+    },
+    {
+     "rand": 1,
+     "branch": 1,
+     "perc-zero": 1,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [9.67218, 3.41193, 3.41507, 3.98123, 6.85168, 6.83121]
+    },
+    {
+     "rand": 1,
+     "branch": 0,
+     "perc-zero": 1,
+     "length": 16,
+     "pos": 15,
+     "alignment": 0,
+     "timings": [9.11868, 2.84668, 2.84689, 3.98358, 6.68188, 6.28149]
+    }]
+  }
+ }
+}
