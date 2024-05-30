@@ -27,7 +27,7 @@ iters = (500, 2**33)
 aligns = (0, 64, 4032)
 reuses = (0, 1)
 vals = (0, 1)
-inits = ("atomic_rwn", "atomic_rw", "rwn", "rw", "wz", "r")
+inits = ("w", "wz", "r")
 impls = ["erms", "movdir64", "temporal", "non_temporal"]
 
 impls = ["erms", "temporal", "non_temporal"]
