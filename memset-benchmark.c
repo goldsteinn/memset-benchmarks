@@ -74,11 +74,10 @@ typedef struct targs {
 
 static void
 memset_t(uint8_t * dst, int val, size_t len) {
-    __m256i v0;
+    __m256i v0 = _mm256_set1_epi8((char)val);
 #define VEC_SIZE "32"
     // clang-format off
     __asm__ volatile(
-        "vpbroadcastb %[val], %[v0]\n"
         ".p2align 6\n"
         "1:\n"
         "vmovdqa %[v0], (" VEC_SIZE " * 0)(%[dst])\n"
@@ -98,11 +97,10 @@ memset_t(uint8_t * dst, int val, size_t len) {
 
 static void
 memset_nt(uint8_t * dst, int val, size_t len) {
-    __m256i v0;
+    __m256i v0 = _mm256_set1_epi8((char)val);
 #define VEC_SIZE "32"
     // clang-format off
     __asm__ volatile(
-        "vpbroadcastb %[val], %[v0]\n"
         ".p2align 6\n"
         "1:\n"
         "vmovntdq %[v0], (" VEC_SIZE " * 0)(%[dst])\n"
@@ -123,12 +121,11 @@ memset_nt(uint8_t * dst, int val, size_t len) {
 
 static void
 memset_cd(uint8_t * dst, int val, size_t len) {
-    __m256i  v0;
+    __m256i v0 = _mm256_set1_epi8((char)val);
     uint8_t *begin, *begin_save;
 #define VEC_SIZE "32"
     // clang-format off
     __asm__ volatile(
-        "vpbroadcastb %[val], %[v0]\n"
         "vmovdqa %[v0], (" VEC_SIZE " * 0)(%[dst])\n"
         "vmovdqa %[v0], (" VEC_SIZE " * 1)(%[dst])\n"
         "vmovdqa %[v0], (" VEC_SIZE " * 2)(%[dst])\n"
