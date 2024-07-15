@@ -2,7 +2,8 @@ import csv
 import sys
 import statistics
 
-KEY_ORDER = ["val", "align", "reuse", "init", "size", "nthreads"]
+KEY_ORDER = ["val", "align", "reuse", "init", "init_loc", "size", "nthreads"]
+KEY_ORDER_DEFAULTS = {"init_loc": "main"}
 KILLS = ["iter"]
 CATEGORY = "func"
 OUTPUT = "time_ns"
@@ -20,10 +21,17 @@ with open(sys.argv[1], newline='\n') as csvfile:
     reader = csv.DictReader(csvfile, delimiter=',')
     for row in reader:
         keys = []
-        assert (len(row) - 2) == (len(KEY_ORDER) + len(KILLS))
+        assert (len(row) - 2) - (len(KEY_ORDER) + len(KILLS)) in (0, -1)
         for key in KEY_ORDER:
-            keys.append(row[key])
-            key_details[key].add(row[key])
+            val = None
+            if key in row:
+                val = row[key]
+            elif key in KEY_ORDER_DEFAULTS:
+                val = KEY_ORDER_DEFAULTS[key]
+            else:
+                assert False, "Missing key: {}".format(key)
+            keys.append(val)
+            key_details[key].add(val)
 
         tmp = results
         for i in range(0, len(keys)):

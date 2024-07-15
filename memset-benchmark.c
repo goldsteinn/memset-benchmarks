@@ -48,8 +48,11 @@ gb_sec(uint64_t bytes, uint64_t ns) {
 
 
 static uint32_t          g_iter;
+static uint32_t          g_init_thread;
 static uint32_t          g_reuse;
+static uint32_t          g_align;
 static size_t            g_size;
+static const char *      g_init_method;
 static pthread_barrier_t g_barrier;
 
 
@@ -121,7 +124,7 @@ memset_nt(uint8_t * dst, int val, size_t len) {
 
 static void
 memset_cd(uint8_t * dst, int val, size_t len) {
-    __m256i v0 = _mm256_set1_epi8((char)val);
+    __m256i  v0 = _mm256_set1_epi8((char)val);
     uint8_t *begin, *begin_save;
 #define VEC_SIZE "32"
     // clang-format off
@@ -160,7 +163,7 @@ use(uint8_t * dst, size_t len) {
         "vpxor %[v1], %[v1], %[v1]\n"
         "vpxor %[v2], %[v2], %[v2]\n"
         "vpxor %[v3], %[v3], %[v3]\n"
-        ".p2align 6\n"        
+        ".p2align 6\n"
         "1:\n"
         "vpxor (" VEC_SIZE " * 0)(%[dst]), %[v0]\n"
         "vpxor (" VEC_SIZE " * 1)(%[dst]), %[v1]\n"
@@ -256,6 +259,65 @@ test(size_t incr, memset_func_t func) {
     munmap(dst - 4096, test_end + 8192);
 }
 
+static uint8_t *
+init_mem(const char * method, uint64_t size, uint64_t align) {
+    uint8_t * dst = (uint8_t *)mmap(NULL, size + align, PROT_READ | PROT_WRITE,
+                                    MAP_ANONYMOUS | MAP_PRIVATE, -1, 0L);
+    assert(dst != MAP_FAILED);
+    if (strcmp(method, "atomic_rwn") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            __atomic_fetch_and(dst + j, 0xff, __ATOMIC_RELAXED);
+        }
+    }
+    else if (strcmp(method, "atomic_rw") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            __atomic_fetch_or(dst + j, 0xff, __ATOMIC_RELAXED);
+        }
+    }
+    else if (strcmp(method, "rwn") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            dst[j] &= 0xff;
+        }
+    }
+    else if (strcmp(method, "rw") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            dst[j] |= 0xff;
+        }
+    }
+    else if (strcmp(method, "w") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            dst[j] = 0xff;
+        }
+    }
+    else if (strcmp(method, "wz") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            dst[j] = 0x0;
+        }
+    }
+    else if (strcmp(method, "r") == 0) {
+        for (size_t j = 0; j < (size + align); j += 4096) {
+            COMPILER_DO_NOT_OPTIMIZE_OUT(dst[j]);
+        }
+    }
+    else if (strcmp(method, "none") == 0) {
+        /* Do nothing.  */
+    }
+    else {
+        printf("Missing init stategy\n");
+        printf(
+            "Available\n"
+            "\t'atomic_rwn': atomic read+write but non-setting\n"
+            "\t'atomic_rw': atomic read+write\n"
+            "\t'rwn': read+write but non-setting\n"
+            "\t'rw': read+write\n"
+            "\t'wz': write zero\n"
+            "\t'r': read only\n");
+        return NULL;
+    }
+    return dst + align;
+}
+
+
 #define make_bench_func(name, func)                                            \
     static void * BENCH_FUNC bench_impl_##name(void * arg) {                   \
         struct timespec start, end;                                            \
@@ -267,6 +329,11 @@ test(size_t incr, memset_func_t func) {
                                                                                \
         uint8_t * dst = ((targs_t *)arg)->dst;                                 \
         int       val = ((targs_t *)arg)->val;                                 \
+        assert((dst == NULL) == (g_init_thread == 1));                         \
+        if (g_init_thread == 1) {                                              \
+            dst = init_mem(g_init_method, g_size, g_align);                    \
+            assert(dst != NULL);                                               \
+        }                                                                      \
         pthread_barrier_wait(&g_barrier);                                      \
                                                                                \
         if (reuse) {                                                           \
@@ -342,18 +409,32 @@ main(int argc, char ** argv) {
     align %= 4096;
     assert(nthreads != 0 && size != 0 && iter != 0);
 
-
     int val = atoi(argv[6]);
+
+    uint32_t init_thread;
+    if (!strcmp(argv[8], "main")) {
+        init_thread = 0;
+    }
+    else if (!strcmp(argv[8], "thread")) {
+        init_thread = 1;
+    }
+    else {
+        printf(
+            "Missing init location\nAvailbe\n"
+            "\t'main'  : Initialize memory in main\n"
+            "\t'thread': Initialize memory in the thread\n");
+        return 2;
+    }
 
     const benchmark_t * bm = NULL;
     for (size_t i = 0; i < sizeof(G_benchmarks) / sizeof(benchmark_t); ++i) {
-        if (!strcmp(argv[8], G_benchmarks[i].name)) {
+        if (!strcmp(argv[9], G_benchmarks[i].name)) {
             bm = &G_benchmarks[i];
             break;
         }
     }
     if (bm == NULL) {
-        printf("Unknown benchmark: %s\n", argv[8]);
+        printf("Unknown benchmark: %s\n", argv[9]);
         printf("Available:\n");
         for (size_t i = 0; i < sizeof(G_benchmarks) / sizeof(benchmark_t);
              ++i) {
@@ -361,9 +442,11 @@ main(int argc, char ** argv) {
         }
         return 1;
     }
-
-    g_iter = iter;
-    g_size = size;
+    g_init_thread = init_thread;
+    g_iter        = iter;
+    g_size        = size;
+    g_align       = align;
+    g_init_method = argv[7];
     assert(pthread_barrier_init(&g_barrier, NULL, nthreads) == 0);
     pthread_attr_t attr;
 
@@ -372,58 +455,13 @@ main(int argc, char ** argv) {
 
     targs_t targs[nthreads];
     for (long i = 0; i < nthreads; ++i) {
-        uint8_t * dst =
-            (uint8_t *)mmap(NULL, size + align, PROT_READ | PROT_WRITE,
-                            MAP_ANONYMOUS | MAP_PRIVATE, -1, 0L);
-        assert(dst != MAP_FAILED);
-        if (strcmp(argv[7], "atomic_rwn") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                __atomic_fetch_and(dst + j, 0xff, __ATOMIC_RELAXED);
-            }
+        uint8_t * dst = NULL;
+        if (init_thread == 0) {
+            dst = init_mem(g_init_method, g_size, g_align);
+            assert(dst != NULL);
         }
-        else if (strcmp(argv[7], "atomic_rw") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                __atomic_fetch_or(dst + j, 0xff, __ATOMIC_RELAXED);
-            }
-        }
-        else if (strcmp(argv[7], "rwn") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                dst[j] &= 0xff;
-            }
-        }
-        else if (strcmp(argv[7], "rw") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                dst[j] |= 0xff;
-            }
-        }
-        else if (strcmp(argv[7], "w") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                dst[j] = 0xff;
-            }
-        }
-        else if (strcmp(argv[7], "wz") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                dst[j] = 0x0;
-            }
-        }
-        else if (strcmp(argv[7], "r") == 0) {
-            for (size_t j = 0; j < (size + align); j += 4096) {
-                COMPILER_DO_NOT_OPTIMIZE_OUT(dst[j]);
-            }
-        }
-        else {
-            printf("Missing init stategy\n");
-            printf(
-                "Available\n"
-                "\t'atomic_rwn': atomic read+write but non-setting\n"
-                "\t'atomic_rw': atomic read+write\n"
-                "\t'rwn': read+write but non-setting\n"
-                "\t'rw': read+write\n"
-                "\t'wz': write zero\n"
-                "\t'r': read only\n");
-            return 2;
-        }
-        targs[i].dst = dst + align;
+
+        targs[i].dst = dst;
         targs[i].val = val;
         assert(pthread_create(&(targs[i].tid), &attr, bm->bench,
                               (void *)(targs + i)) == 0);
@@ -434,9 +472,9 @@ main(int argc, char ** argv) {
     for (long i = 0; i < nthreads; ++i) {
         munmap(targs[i].dst - align, size + align);
     }
-    printf("func,nthreads,iter,size,align,reuse,val,init,time_ns\n");
+    printf("func,nthreads,iter,size,align,reuse,val,init,init_loc,time_ns\n");
     for (long i = 0; i < nthreads; ++i) {
-        printf("%s,%ld,%u,%zu,%u,%u,%d,%s,%lu\n", bm->name, nthreads, iter,
-               size, align, reuse, val, argv[7], targs[i].ns_out);
+        printf("%s,%ld,%u,%zu,%u,%u,%d,%s,%s,%lu\n", bm->name, nthreads, iter,
+               size, align, reuse, val, argv[7], argv[8], targs[i].ns_out);
     }
 }

@@ -22,12 +22,13 @@ for i in range(1, 30):
 nthreads.append(NCPUS)
 nthreads = sorted(list(set(nthreads)))
 #nthreads = nthreads[:-1]
-sizes = [(4096 << x) for x in range(8, 17)]
+sizes = [(4096 << x) for x in range(1, 17)]
 iters = (500, 2**33)
-aligns = [0] #, 64, 4032]
+aligns = [0]  #, 64, 4032]
 reuses = (0, 1)
 vals = (0, 1)
-inits = ("w", "wz", "r")
+inits = ("w", "wz", "r", "none")
+init_locs = ("thread", "main")
 impls = ["erms", "movdir64", "temporal", "non_temporal"]
 
 impls = ["erms", "temporal", "non_temporal"]
@@ -54,8 +55,10 @@ for nthread in nthreads:
             for reuse in reuses:
                 for val in vals:
                     for init in inits:
-                        for impl in impls:
-                            assert os_do(
-                                "./{} {} {} {} {} {} {} {} {} >> {}".format(
-                                    BM, nthread, size, it, align, reuse, val,
-                                    init, impl, DST_FILE))
+                        for init_loc in init_locs:
+                            for impl in impls:
+                                assert os_do(
+                                    "./{} {} {} {} {} {} {} {} {} {} >> {}".
+                                    format(BM, nthread, size, it, align, reuse,
+                                           val, init, init_loc, impl,
+                                           DST_FILE))
